@@ -27,32 +27,29 @@
 <div class="gist">
 
   <table class="table table-bordered meta" cellpadding="0" cellspacing="0">
-  <tbody>
-    <tr class="info">
-      <th class="span2"> description </th>
-      <td> <%= @gist.description %> </td>
-    </tr>
-    <tr class="info">
-      <th class="span2"> public clone url</th>
-      <td> <a href="<%= url = public_clone_url(@gist) %>"> <%= url %> </a> </td>
-    </tr>
-  </tbody>
+    <tbody>
+      <tr class="info">
+        <th class="span2"> description </th>
+        <td> <%= @gist.description %> </td>
+      </tr>
+      <tr class="info">
+        <th class="span2"> public clone url</th>
+        <td> <a href="<%= url = public_clone_url(@gist) %>"> <%= url %> </a> </td>
+      </tr>
+    </tbody>
   </table>
 
   <%- @tree.each do |b| %>
-
     <% gb = GistBlobPresenter.new(b) %>
 
     <div class="file">
-    <div class="row">
-      <div class="meta span8"> <%= i('file', b.name) %> </div>
-      <div class="meta span1 text-pull-right"> <%= link_to('raw', gist_raw_url(@gist.id, b.oid, b.name)) %> </div>
-    </div>
-    <div class="data syntax"> <%= gb.pretty_content %> </div>
-
+      <div class="row">
+        <div class="meta span8"> <b><%= i('file', b.name) %> </b></div>
+        <div class="meta span1 text-pull-right"> <%= link_to('raw', gist_raw_url(@gist.id, b.oid, b.name)) %> </div>
+      </div>
+      <div class="data syntax"> <%= gb.pretty_content %> </div>
     </div>
 
   <% end %>
 
 </div>
-

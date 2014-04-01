@@ -12,7 +12,7 @@ class GistBlob
   end
 
   def name
-    @name || 'Text'
+    @name
   end
 
   def blank?

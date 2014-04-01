@@ -1,14 +1,20 @@
 <% n = "gist[gist_blobs_attributes][]" -%>
 
 <%= f.fields_for(gist_blob) do |gf| -%>
-
-  <div class="control-group file">
-    <div class="controls ">
-      <div class="controls controls-row"> 
-      <%= gf.text_field 'name', :name => "#{n}[name]", class: 'span8' -%>
-      <span rel="rmBlob" class="span1 action act-danger" title="remove file"><i class="icon-remove-sign icon-large"></i></span>
-      </div>
-      <%= gf.text_area 'blob', :name => "#{n}[blob]", class: 'span9' -%>
+  <div class="bubble gist-file">
+    <div class="control-group file">
+      
+        <div class="controls"> 
+          <%= gf.text_field 'name', :name => "#{n}[name]", class: 'span3', placeholder: 'name this file...' -%>
+          <label class="checkbox inline"><input type="checkbox" class="ace-enable" /> ACE Editor</label>
+          <a rel="rmBlob" class="action btn btn-link act-danger pull-right" title="remove file"><i class="icon-remove-sign icon-large"></i></a>
+        </div>
+        <div class="input">
+          <%= gf.text_area 'blob', :name => "#{n}[blob]", class: 'span10 gist_blob' -%>
+          <div class="file-content">
+          </div>
+        </div>
+      
     </div>
   </div>
 

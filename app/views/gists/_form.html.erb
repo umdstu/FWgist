@@ -15,33 +15,41 @@
 
   <div class="control-group">
     <div class="controls">
-      <%= f.text_field 'description', title: 'gist description', placeholder: 'description', class: 'span9 input-xlarge' -%>
+      <%= f.text_field 'description', title: 'gist description', placeholder: 'Gist description...', class: 'span9 input-xlarge' -%>
     </div>
   </div>
 
   <hr/>
 
-  <% @gist.gist_blobs.each do |gb| %>
-     <%= render partial: 'gist_blob', object: gb, locals: {f: f } %>
-  <% end %>
+  <div id="files">
+    <div id="js-gist-files">
+      <% @gist.gist_blobs.each do |gb| %>
+        <%= render partial: 'gist_blob', object: gb, locals: {f: f } %>
+      <% end %>
+    </div>
+  </div>
+  
 
-  <% s = 'display:none;' unless @gist.gist_blobs.empty? %>
-
-  <div class="empty" style="<%= s %>">
+  <div id="template" style="display:none;">
+    <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
+  </div>
+  
+  <div id="added-files">
     <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
   </div>
 
   <div class="control-group">
     <div class="controls controls-row">
-      <span class="span8" style="margin:0">&nbsp</span>
-      <span rel="addBlob" class="span1 action act-primary" title="add file"><i class="icon-plus-sign icon-large"></i></span>
+      <div class="row">
+        <div class="span3">
+          <a rel="addBlob" class="btn btn-default action act-primary" title="add file">Add Another File</a>
+        </div>
+        <div class="span7">
+          <%= f.submit 'Create Public Gist', id:'submit-public', class:'btn btn-primary pull-right'%>
+        </div>
+      </div>
     </div>
   </div>
 
 </fieldset>
-
-
-  <div class="form-actions actions">
-    <%= f.submit class:'btn btn-primary'%>
-  </div>
 <% end %>

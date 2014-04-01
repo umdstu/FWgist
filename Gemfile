@@ -9,7 +9,7 @@ gem 'sqlite3'
 
 gem 'rugged', '0.17.0.b6'
 gem 'pygments.rb'
-
+gem 'ace-rails-ap'
 
 
 # Gems used only for assets and not required

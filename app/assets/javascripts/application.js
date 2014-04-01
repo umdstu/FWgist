@@ -14,36 +14,13 @@
 //= require jquery_ujs
 //= require jquery.effects.highlight
 //= require twitter/bootstrap
+//= require ace/ace
+//= require ace/theme-monokai
 //= require_tree .
 
 
 $(function() {
 
   $('abbr.timeago').timeago()
-
-
-  // Gist
-
-  function rmBlob() {
-    // TODO: implment "undo"
-    $(this).parents('.control-group:first').
-      find('*[name]').
-        attr('disabled', 'disabled').
-        end().
-      hide()
-
-  }
-
-  function addBlob() {
-    // TODO: implment "undo"
-    var t = $('form .empty')
-    var template = t.html()
-    var blob = $(template).insertBefore(t)
-    $(blob).
-      effect('highlight', {}, 3000)
-  }
-
-  $('form span[rel=rmBlob]').click(rmBlob)
-  $('form span[rel=addBlob]').click(addBlob)
 
 })
