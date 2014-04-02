@@ -30,11 +30,7 @@ $(document).ready(function () {
 
   function rmBlob() {
     // TODO: implment "undo"
-    $(this).parents('.control-group:first').
-      find('*[name]').
-        attr('disabled', 'disabled').
-        end().
-      hide()
+    $(this).parents('.gist-file:first').remove();
 
   }
 

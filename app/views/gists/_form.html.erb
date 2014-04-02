@@ -35,17 +35,19 @@
   </div>
   
   <div id="added-files">
-    <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
+    <% if !@gist.gist_blobs %>
+      <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
+    <% end %>
   </div>
 
   <div class="control-group">
     <div class="controls controls-row">
       <div class="row">
         <div class="span3">
-          <a rel="addBlob" class="btn btn-default action act-primary" title="add file">Add Another File</a>
+          <a rel="addBlob" class="btn btn-default act-primary" title="add file">Add Another File</a>
         </div>
         <div class="span7">
-          <%= f.submit 'Create Public Gist', id:'submit-public', class:'btn btn-primary pull-right'%>
+          <%= f.submit id:'submit-public', class:'btn btn-primary pull-right'%>
         </div>
       </div>
     </div>

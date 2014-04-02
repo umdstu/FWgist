@@ -7,7 +7,7 @@
         <div class="controls"> 
           <%= gf.text_field 'name', :name => "#{n}[name]", class: 'span3', placeholder: 'name this file...' -%>
           <label class="checkbox inline"><input type="checkbox" class="ace-enable" /> ACE Editor</label>
-          <a rel="rmBlob" class="action btn btn-link act-danger pull-right" title="remove file"><i class="icon-remove-sign icon-large"></i></a>
+          <a rel="rmBlob" class="btn btn-danger pull-right btn-small" title="remove file"><i class="icon-remove-sign"></i> Delete</a>
         </div>
         <div class="input">
           <%= gf.text_area 'blob', :name => "#{n}[blob]", class: 'span10 gist_blob' -%>

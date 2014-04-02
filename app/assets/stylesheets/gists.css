@@ -63,3 +63,6 @@
   font-size: .8em !important;
   color: #666;
 }
+form a[rel=rmBlob] {
+  margin-top: 4px;
+}
