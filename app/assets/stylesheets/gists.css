@@ -33,7 +33,7 @@
 }
 
 .file {
-  
+  padding-bottom: 10px;
 }
 .file label {
   padding-top: 0px !important;
@@ -52,6 +52,14 @@
   height: 280px;
   display: none;
 }
-.data pre {
+.syntax pre {
   border-radius: 0px;
+}
+.copy-input {
+  height: 16px !important;
+  font-size: 12px !important;
+}
+.copy-input-title {
+  font-size: .8em !important;
+  color: #666;
 }

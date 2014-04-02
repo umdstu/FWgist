@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  $(".copy-input").on('click', function() {
+    $(this).select();
+  });
+  
+  $('.gtooltip').tooltip();
 
   $("#added-files").on("click", ".ace-enable", function (e) {
     var editor;

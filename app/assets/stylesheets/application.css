@@ -11,5 +11,9 @@
  *= require_self
  *= require_tree .
  *
- *= require 'font-awesome'
+ *= require font-awesome
  */
+
+.sidebar {
+  margin-top: 30px !important;
+}

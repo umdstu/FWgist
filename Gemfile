@@ -23,12 +23,12 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  gem 'font-awesome-rails'
+  gem 'font-awesome-rails', '~> 4.0.3.1'
 end
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
 gem 'kaminari'
 gem 'bootstrap_kaminari', :git => 'https://github.com/gmarik/bootstrap_kaminari'

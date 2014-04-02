@@ -95,8 +95,8 @@
           <a class="brand" href="/">Gistie</a>
           <div class="container nav-collapse">
             <ul class="nav ">
-              <li><%= link_to i('list-ul', "Gists"), "/gists"  %></li>
-              <li><%= link_to i('plus', "Gist"), "/gists/new" %></li>
+              <li><%= link_to fa_icon('list-ul', :text => "Gists"), "/gists"  %></li>
+              <li><%= link_to fa_icon('plus', :text => "Gist"), "/gists/new" %></li>
             </ul>
 
             <ul class="nav pull-right">
@@ -118,16 +118,17 @@
         </div>
 
         <div class="row">
-          <div class="span9 offset1">
-             <%= yield %>
-          </div>
-          <div class="span3">
+          <div class="span2">
             <% if content_for? :sidebar %>
               <div class="sidebar">
                 <%= yield :sidebar %>
               </div>
             <% end %>
           </div><!--/span-->
+          <div class="span9">
+             <%= yield %>
+          </div>
+          
         </div><!--/row-->
 
       <hr />

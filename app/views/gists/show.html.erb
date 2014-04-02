@@ -1,26 +1,18 @@
 
 <% content_for :sidebar do %>
   <%= render partial: 'revisions', locals: { gist: @gist } %>
+  <span class='copy-input-title'><b>Clone</b> this Gist</span>
+  <input type="text" class="span2 copy-input" value="<%= public_clone_url(@gist) %>"/>
+  <span class='copy-input-title'><b>Link to</b> this Gist</span>
+  <input type="text" class="span2 copy-input" value="<%= public_clone_url(@gist) %>"/>
 <% end %>
 
-<h2><span><%= i('book') %></span> Gist #<%= @gist.id %></h2>
-
-
-
 <div class="row">
-  <div class="btn-group span3 pull-right text-pull-right">
+  <div class="span3 pull-right text-pull-right">
 
-    <%= link_to i('edit',  "Edit"), edit_gist_path(@gist), class: 'btn btn-primary' %>
-
-    <button class="btn dropdown-toggle btn-primary" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-
-    <ul class="dropdown-menu">
-      <li> <%= link_to i('trash', "Destroy"), @gist,              class: '', method: :delete, data: { confirm: 'Are you sure?' } %>
-      </li>
-    </ul>
-
+    
+    <%= link_to fa_icon('edit',  :text => "Edit"), edit_gist_path(@gist), class: 'btn' %>
+    <%= link_to fa_icon('trash-o', :text => "Delete"), @gist, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>
 
@@ -29,23 +21,19 @@
   <table class="table table-bordered meta" cellpadding="0" cellspacing="0">
     <tbody>
       <tr class="info">
-        <th class="span2"> description </th>
-        <td> <%= @gist.description %> </td>
-      </tr>
-      <tr class="info">
-        <th class="span2"> public clone url</th>
-        <td> <a href="<%= url = public_clone_url(@gist) %>"> <%= url %> </a> </td>
+        <th class="span2">Description </th>
+        <td style="color: #777;"> <%= @gist.description.empty? ? 'No description...' : @gist.description %> </td>
       </tr>
     </tbody>
   </table>
 
   <%- @tree.each do |b| %>
     <% gb = GistBlobPresenter.new(b) %>
-
     <div class="file">
       <div class="row">
-        <div class="meta span8"> <b><%= i('file', b.name) %> </b></div>
-        <div class="meta span1 text-pull-right"> <%= link_to('raw', gist_raw_url(@gist.id, b.oid, b.name)) %> </div>
+        <div class="meta span8"> <b><%= fa_icon('file-text', :text => b.name) %></b></div>
+        <div class="meta span1 text-pull-right"> 
+          <%= link_to(fa_icon('code'), gist_raw_url(@gist.id, b.oid, b.name), :data => {:toggle => 'tooltip'}, :class => 'gtooltip', :title => 'View Raw') %> </div>
       </div>
       <div class="data syntax"> <%= gb.pretty_content %> </div>
     </div>
