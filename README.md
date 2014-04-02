@@ -1,10 +1,10 @@
-Gistie
+FWgist
 ================
 
-[Gistie] is an open source [Git]-based pastebin implementation that enables sharing snippets(aka Gist) using simple web UI.
+[FWgist] Like Github's Gist service, but for use behind a Firewall.
 Every Gist is a *Git repository* thus **versioned** and **cloneable**. Heavily inspired by gist.github.com
 
-![Gistie](public/fwgist.png)
+![FWgist](public/fwgist.png)
 
 Features
 ---------------
@@ -37,11 +37,11 @@ TODO
 Installation
 ---------------
 
-[Gistie] is based on Ruby on Rails, Sqlite, Libgit2 and Pygments(requires Python installed).
+[FWgist] is based on Ruby on Rails, Sqlite, Libgit2 and Pygments(requires Python installed).
 
 
-1. `git clone https://github.com/gmarik/Gistie` 
-2. `cd Gistie && bundle install`
+1. `git clone https://github.com/gmarik/FWgist` 
+2. `cd FWgist && bundle install`
 3. `rake db:create db:migrate`
 4. `rails server`
 
@@ -52,14 +52,14 @@ Making repos cloneable
 
 run
 
-    git-daemon --user=nobody --export-all --base-path=/path/to/Gistie/repos_production
+    git-daemon --user=nobody --export-all --base-path=/path/to/FWgist/repos_production
 
 
 
 Testing
 ---------------
 
-1. `cd Gistie`
+1. `cd FWgist`
 2. `rake db:test:clone_structure`
 3. `rspec spec`
 
@@ -70,12 +70,10 @@ License
 Please see LICENSE for licensing details.
 
 
-Author
+Original Author
 ---------------
-
 Maryan Hratson aka [@gmarik](http://github.com/gmarik)
-
 - contact: [@gmarik](http://twitter.com/gmarik)
 
-[Gistie]:http://github.com/gmarik/Gistie
+[FWgist]:http://github.com/gmarik/FWgist
 
