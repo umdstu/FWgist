@@ -1,27 +1,26 @@
 class Gist < ActiveRecord::Base
+  has_many :comments
+  
+  attr_accessor :gist_files, :gist_files_attributes
 
-  # TODO: rename this to gist_files instead gist_blobs
-  # as blob is just content without filename
-  attr_accessor :gist_blobs, :gist_blobs_attributes
-
-  attr_accessible :gist_blobs_attributes, :description
+  attr_accessible :gist_files_attributes, :description
 
   validate :non_blank, :unique_names
 
   scope :recent, -> { order('created_at desc') }
 
   def non_blank
-    blank? and errors.add(:gist_blobs, "Can't be blank")
+    blank? and errors.add(:gist_files, "Can't be blank")
   end
 
   def unique_names
-    dups = dup_names(gist_blobs).map {|name, count| %Q["#{name}": #{count}] }
+    dups = dup_names(gist_files).map {|name, count| %Q["#{name}": #{count}] }
     dups.empty? or
-      errors.add(:gist_blobs, "duplicate names: #{dups.join(',')}")
+      errors.add(:gist_files, "duplicate names: #{dups.join(',')}")
   end
 
   def dup_names(blobs)
-    duplicates = blobs.map(&:name).
+    duplicates = files.map(&:name).
       group_by {|b| b }.
       values.
       map {|b| [b.first, b.size]}.
@@ -31,22 +30,22 @@ class Gist < ActiveRecord::Base
   private :dup_names
 
   def blank?
-    gist_blobs.blank?
+    gist_files.blank?
   end
 
-  def gist_blobs_attributes
-    @gist_blobs_attributes || []
+  def gist_files_attributes
+    @gist_files_attributes || []
   end
 
-  def gist_blobs_attributes=(attrs)
-    self.gist_blobs = attrs.map do |attr|
-      GistBlob.new(attr)
+  def gist_files_attributes=(attrs)
+    self.gist_files = attrs.map do |attr|
+      GistFile.new(attr)
     end.reject(&:blank?)
   end
 
   # Git integration
-  def gist_blobs
-    @gist_blobs ||= begin
+  def gist_files
+    @gist_files ||= begin
        if new_record? then []
        else gist_read
        end
@@ -82,17 +81,17 @@ class Gist < ActiveRecord::Base
   end
 
   def gist_read
-    repo.tree(repo.head).map(&method(:gist_blob))
+    repo.tree(repo.head).map(&method(:gist_file))
   end
 
-  def gist_blob(entry)
+  def gist_file(entry)
     # TODO: make consitent
     params = {name: entry.name, blob: entry.content}
-    GistBlob.new(params)
+    GistFile.new(params)
   end
 
   def gist_write
-    repo.write(self.gist_blobs)
+    repo.write(self.gist_files)
   end
 
   def recent_commits(limit = 10)
@@ -104,6 +103,6 @@ class Gist < ActiveRecord::Base
   end
 
   def to_preview_html
-    GistBlobPresenter.new(self.tree(repo.head).first).pretty_excerpt
+    GistFilePresenter.new(self.tree(repo.head).first).pretty_excerpt
   end
 end

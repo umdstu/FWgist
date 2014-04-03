@@ -1,57 +1,55 @@
 <%= form_for(@gist) do |f| %>
   <fieldset>
-  <% if @gist.errors.any? %>
-    <div id="error_explanation">
-      <%# TODO improve error display %>
-      <strong><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</strong>
-
-      <ul>
-      <% @gist.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field 'description', title: 'gist description', placeholder: 'Gist description...', class: 'span9 input-xlarge' -%>
-    </div>
-  </div>
-
-  <hr/>
-
-  <div id="files">
-    <div id="js-gist-files">
-      <% @gist.gist_blobs.each do |gb| %>
-        <%= render partial: 'gist_blob', object: gb, locals: {f: f } %>
-      <% end %>
-    </div>
-  </div>
-  
-
-  <div id="template" style="display:none;">
-    <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
-  </div>
-  
-  <div id="added-files">
-    <% if !@gist.gist_blobs %>
-      <%= render partial: 'gist_blob', object: GistBlob.new, locals: {f: f} %>
+    <% if @gist.errors.any? %>
+      <div id="error_explanation">
+        <strong><%= pluralize(@gist.errors.count, "error") %> prohibited this gist from being saved:</strong>
+        <ul>
+        <% @gist.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     <% end %>
-  </div>
 
-  <div class="control-group">
-    <div class="controls controls-row">
-      <div class="row">
-        <div class="span3">
-          <a rel="addBlob" class="btn btn-default act-primary" title="add file">Add Another File</a>
-        </div>
-        <div class="span7">
-          <%= f.submit id:'submit-public', class:'btn btn-primary pull-right'%>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.text_field 'description', title: 'gist description', placeholder: 'Gist description...', class: 'span9 input-xlarge' -%>
+      </div>
+    </div>
+
+    <hr />
+
+    <div id="files">
+      <div id="js-gist-files">
+        <% @gist.gist_files.each do |gb| %>
+          <%= render partial: 'gist_file', object: gb, locals: {f: f } %>
+        <% end %>
+      </div>
+    </div>
+  
+
+    <div id="template" style="display:none;">
+      <%= render partial: 'gist_file', object: GistFile.new, locals: {f: f} %>
+    </div>
+  
+    <div id="added-files">
+      <% if @gist.gist_files.empty? %>
+        <%= render partial: 'gist_file', object: GistFile.new, locals: {f: f} %>
+      <% end %>
+    </div>
+
+    <div class="control-group">
+      <div class="controls controls-row">
+        <div class="row">
+          <div class="span3">
+            <a rel="addBlob" class="btn btn-default act-primary" title="add file">Add Another File</a>
+          </div>
+          <div class="span7">
+            <%= f.submit id:'submit-public', class:'btn btn-primary pull-right'%>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-</fieldset>
+  </fieldset>
 <% end %>

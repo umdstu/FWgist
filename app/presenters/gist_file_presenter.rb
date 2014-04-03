@@ -1,11 +1,11 @@
-class GistBlobPresenter
+class GistFilePresenter
 
-  delegate :name, :content, :data, :filemode, :oid, :to => :gist_blob
+  delegate :name, :content, :data, :filemode, :oid, :to => :gist_file
 
-  attr_reader :gist_blob
+  attr_reader :gist_file
 
-  def initialize(blob)
-    @gist_blob = blob
+  def initialize(file)
+    @gist_file = file
   end
 
   def highlight(filename, src)

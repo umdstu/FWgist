@@ -1,6 +1,6 @@
-<% n = "gist[gist_blobs_attributes][]" -%>
+<% n = "gist[gist_files_attributes][]" -%>
 
-<%= f.fields_for(gist_blob) do |gf| -%>
+<%= f.fields_for(gist_file) do |gf| -%>
   <div class="bubble gist-file">
     <div class="control-group file">
       
@@ -11,8 +11,7 @@
         </div>
         <div class="input">
           <%= gf.text_area 'blob', :name => "#{n}[blob]", class: 'span10 gist_blob' -%>
-          <div class="file-content">
-          </div>
+          <div class="file-content"></div>
         </div>
       
     </div>

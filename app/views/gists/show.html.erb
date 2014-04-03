@@ -28,7 +28,7 @@
   </table>
 
   <%- @tree.each do |b| %>
-    <% gb = GistBlobPresenter.new(b) %>
+    <% gb = GistFilePresenter.new(b) %>
     <div class="file">
       <div class="row">
         <div class="meta span8"> <b><%= fa_icon('file-text', :text => b.name) %></b></div>
@@ -40,4 +40,28 @@
 
   <% end %>
 
+</div>
+
+<div class="row">
+  <div id="new-comment">
+    <%= render :partial => 'comments/form', locals: {:gist => @gist, :comment => Comment.new} %>
+  </div>
+</div>
+
+<div class="row">
+  <div id="gist-comments" class="offset1">
+    <% @gist.comments.each do |comment| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          Username 
+          <span class="pull-right">
+            <abbr class="timeago " title="<%= (time = comment.created_at.getutc).iso8601 %>"> <%= time.to_s %></abbr>
+          </span>
+        </div>
+        <div class="panel-body">
+          <%= render :partial => 'comments/inline_comment', :locals => {:comment => comment} %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
