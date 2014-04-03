@@ -1,0 +1,13 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+make  install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.0.0/ext/fastfilereader/.gem.20140403-24377-13z2995
+installing default fastfilereaderext libraries

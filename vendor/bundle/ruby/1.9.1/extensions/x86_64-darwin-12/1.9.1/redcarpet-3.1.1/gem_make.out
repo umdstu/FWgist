@@ -1,0 +1,43 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling autolink.c
+compiling buffer.c
+buffer.c: In function 'bufcstr':
+buffer.c:104:2: warning: passing argument 1 of 'bufgrow' discards 'const' qualifier from pointer target type [enabled by default]
+buffer.c:53:1: note: expected 'struct buf *' but argument is of type 'const struct buf *'
+compiling houdini_href_e.c
+compiling houdini_html_e.c
+compiling html.c
+compiling html_smartypants.c
+html_smartypants.c: In function 'squote_len':
+html_smartypants.c:92:2: warning: initialization discards 'const' qualifier from pointer target type [enabled by default]
+html_smartypants.c:92:2: warning: initialization discards 'const' qualifier from pointer target type [enabled by default]
+html_smartypants.c:92:2: warning: initialization discards 'const' qualifier from pointer target type [enabled by default]
+html_smartypants.c:92:2: warning: initialization discards 'const' qualifier from pointer target type [enabled by default]
+html_smartypants.c: In function 'smartypants_squote':
+html_smartypants.c:137:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+html_smartypants.c: In function 'smartypants_cb__amp':
+html_smartypants.c:232:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+compiling markdown.c
+markdown.c: In function 'char_link':
+markdown.c:1034:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+markdown.c:1074:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+markdown.c: In function 'sd_markdown_render':
+markdown.c:2804:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+markdown.c: At top level:
+markdown.c:90:15: warning: 'char_underline' declared 'static' but never defined [-Wunused-function]
+markdown.c:91:15: warning: 'char_highlight' declared 'static' but never defined [-Wunused-function]
+compiling rc_markdown.c
+compiling rc_render.c
+rc_render.c: In function 'rndr_link_attributes':
+rc_render.c:281:28: warning: variable 'rndr' set but not used [-Wunused-but-set-variable]
+compiling stack.c
+linking shared-object redcarpet.bundle
+
+make  install
+/usr/bin/install -c -m 0755 redcarpet.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/redcarpet-3.1.1/ext/redcarpet/.gem.20140403-24377-qrp3cu
+installing default redcarpet libraries

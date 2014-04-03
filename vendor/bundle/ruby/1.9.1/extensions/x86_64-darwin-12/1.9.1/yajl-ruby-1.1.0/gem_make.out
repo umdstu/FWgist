@@ -1,0 +1,26 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling yajl.c
+compiling yajl_alloc.c
+compiling yajl_buf.c
+compiling yajl_encode.c
+compiling yajl_ext.c
+yajl_ext.c: In function 'yajl_encode_part':
+yajl_ext.c:117:21: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+yajl_ext.c: In function 'yajl_found_hash_key':
+yajl_ext.c:291:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+yajl_ext.c: In function 'rb_yajl_parser_parse':
+yajl_ext.c:442:17: warning: variable 'stat' set but not used [-Wunused-but-set-variable]
+compiling yajl_gen.c
+compiling yajl_lex.c
+compiling yajl_parser.c
+compiling yajl_version.c
+linking shared-object yajl/yajl.bundle
+
+make  install
+/usr/bin/install -c -m 0755 yajl.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/yajl-ruby-1.1.0/ext/yajl/.gem.20140403-24377-104lxfx/yajl
+installing default yajl libraries

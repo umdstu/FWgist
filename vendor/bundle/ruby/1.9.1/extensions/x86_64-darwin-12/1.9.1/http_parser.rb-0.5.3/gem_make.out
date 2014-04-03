@@ -1,0 +1,31 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling ruby_http_parser.c
+ruby_http_parser.c: In function 'on_message_begin':
+ruby_http_parser.c:120:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'on_header_value':
+ruby_http_parser.c:176:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'on_headers_complete':
+ruby_http_parser.c:222:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'on_body':
+ruby_http_parser.c:243:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'on_message_complete':
+ruby_http_parser.c:262:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'Parser_execute':
+ruby_http_parser.c:343:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c:349:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ruby_http_parser.c: In function 'Parser_set_header_value_type':
+ruby_http_parser.c:480:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+compiling ryah_http_parser.c
+ryah_http_parser.c: In function 'ryah_http_parser_execute':
+ryah_http_parser.c:376:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ryah_http_parser.c:634:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+linking shared-object ruby_http_parser.bundle
+
+make  install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/http_parser.rb-0.5.3/ext/ruby_http_parser/.gem.20140403-24377-167s9a1
+installing default ruby_http_parser libraries

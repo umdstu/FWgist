@@ -1,0 +1,29 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+ -- make -f Makefile.embed
+checking for main() in -lgit2_embed... yes
+checking for git2.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling rugged.c
+compiling rugged_blob.c
+compiling rugged_commit.c
+compiling rugged_config.c
+compiling rugged_index.c
+compiling rugged_object.c
+compiling rugged_reference.c
+rugged_reference.c: In function 'rb_git_reflog_write':
+rugged_reference.c:534:10: warning: unused variable 'oid' [-Wunused-variable]
+compiling rugged_remote.c
+compiling rugged_repo.c
+compiling rugged_revwalk.c
+compiling rugged_signature.c
+compiling rugged_tag.c
+compiling rugged_tree.c
+linking shared-object rugged/rugged.bundle
+
+make  install
+/usr/bin/install -c -m 0755 rugged.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/rugged-0.17.0.b6/ext/rugged/.gem.20140403-24377-9p9udo/rugged
+installing default rugged libraries

@@ -1,0 +1,20 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling posix-spawn.c
+In file included from /Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/ruby.h:24:0,
+                 from /Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby.h:32,
+                 from posix-spawn.c:14:
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0/ruby/config.h:17:0: warning: "_GNU_SOURCE" redefined [enabled by default]
+posix-spawn.c:3:0: note: this is the location of the previous definition
+posix-spawn.c: In function 'rb_posixspawn_pspawn':
+posix-spawn.c:341:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+posix-spawn.c:381:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+linking shared-object posix_spawn_ext.bundle
+
+make  install
+/usr/bin/install -c -m 0755 posix_spawn_ext.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/posix-spawn-0.3.6/ext/.gem.20140403-24377-1e16nzz
+installing default posix_spawn_ext libraries

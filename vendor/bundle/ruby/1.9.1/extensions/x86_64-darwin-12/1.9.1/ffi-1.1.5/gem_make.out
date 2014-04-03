@@ -1,0 +1,172 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for rb_thread_blocking_region()... yes
+checking for ruby_native_thread_p()... yes
+checking for rb_thread_call_with_gvl()... yes
+creating extconf.h
+creating Makefile
+
+make  clean
+
+make
+Configuring libffi
+cd "/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi-x86_64-darwin12.5.0" && make
+make "AR_FLAGS=" "CC_FOR_BUILD=" "CFLAGS=-Wall -fexceptions" "CXXFLAGS=" "CFLAGS_FOR_BUILD=" "CFLAGS_FOR_TARGET=" "INSTALL=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_SCRIPT=/usr/bin/install -c" "JC1FLAGS=" "LDFLAGS=" "LIBCFLAGS=" "LIBCFLAGS_FOR_TARGET=" "MAKE=make" "MAKEINFO=/bin/sh /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/missing --run makeinfo " "PICFLAG=" "PICFLAG_FOR_TARGET=" "RUNTESTFLAGS=" "SHELL=/bin/sh" "exec_prefix=/usr/local" "infodir=/usr/local/share/info" "libdir=/usr/local/lib" "mandir=/usr/local/share/man" "prefix=/usr/local" "AR=ar" "AS=as" "CC=/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6" "CXX=c++" "LD=ld" "NM=/usr/bin/nm" "RANLIB=ranlib" "DESTDIR=" all-recursive
+Making all in include
+make[3]: Nothing to be done for `all'.
+Making all in testsuite
+make[3]: Nothing to be done for `all'.
+Making all in man
+make[3]: Nothing to be done for `all'.
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/debug.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/debug.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/debug.c  -fno-common -DPIC -o src/.libs/debug.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/prep_cif.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/prep_cif.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/prep_cif.c  -fno-common -DPIC -o src/.libs/prep_cif.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/types.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/types.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/types.c  -fno-common -DPIC -o src/.libs/types.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/raw_api.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/raw_api.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/raw_api.c  -fno-common -DPIC -o src/.libs/raw_api.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/java_raw_api.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/java_raw_api.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/java_raw_api.c  -fno-common -DPIC -o src/.libs/java_raw_api.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/closures.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/closures.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/closures.c  -fno-common -DPIC -o src/.libs/closures.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/x86/ffi.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/ffi.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/ffi.c  -fno-common -DPIC -o src/x86/.libs/ffi.o
+/bin/sh ./libtool   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -c -o src/x86/darwin.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/darwin.S
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/darwin.S  -fno-common -DPIC -o src/x86/.libs/darwin.o
+/bin/sh ./libtool --tag=CC   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -g  -Wall -fexceptions -c -o src/x86/ffi64.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/ffi64.c
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -g -Wall -fexceptions -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/ffi64.c  -fno-common -DPIC -o src/x86/.libs/ffi64.o
+/bin/sh ./libtool   --mode=compile /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src  -c -o src/x86/darwin64.lo /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/darwin64.S
+libtool: compile:  /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -DHAVE_CONFIG_H -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -I. -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/include -Iinclude -I/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src -c /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/src/x86/darwin64.S  -fno-common -DPIC -o src/x86/.libs/darwin64.o
+/bin/sh ./libtool --tag=CC   --mode=link /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -g  -Wall -fexceptions -version-info `grep -v '^#' /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/libtool-version`    -o libffi.la -rpath /usr/local/lib src/debug.lo src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/darwin.lo src/x86/ffi64.lo src/x86/darwin64.lo                      
+libtool: link: /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -dynamiclib -Wl,-undefined -Wl,dynamic_lookup -o .libs/libffi.5.dylib  src/.libs/debug.o src/.libs/prep_cif.o src/.libs/types.o src/.libs/raw_api.o src/.libs/java_raw_api.o src/.libs/closures.o src/x86/.libs/ffi.o src/x86/.libs/darwin.o src/x86/.libs/ffi64.o src/x86/.libs/darwin64.o      -install_name  /usr/local/lib/libffi.5.dylib -compatibility_version 6 -current_version 6.10 -Wl,-single_module
+libtool: link: (cd ".libs" && rm -f "libffi.dylib" && ln -s "libffi.5.dylib" "libffi.dylib")
+libtool: link: ( cd ".libs" && rm -f "libffi.la" && ln -s "../libffi.la" "libffi.la" )
+/bin/sh ./libtool --tag=CC   --mode=link /usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -g  -Wall -fexceptions   -o libffi_convenience.la  src/debug.lo src/prep_cif.lo src/types.lo src/raw_api.lo src/java_raw_api.lo src/closures.lo      src/x86/ffi.lo src/x86/darwin.lo src/x86/ffi64.lo src/x86/darwin64.lo                      
+libtool: link: ar cru .libs/libffi_convenience.a src/.libs/debug.o src/.libs/prep_cif.o src/.libs/types.o src/.libs/raw_api.o src/.libs/java_raw_api.o src/.libs/closures.o src/x86/.libs/ffi.o src/x86/.libs/darwin.o src/x86/.libs/ffi64.o src/x86/.libs/darwin64.o 
+/usr/bin/ranlib: file: .libs/libffi_convenience.a(ffi.o) has no symbols
+/usr/bin/ranlib: file: .libs/libffi_convenience.a(darwin.o) has no symbols
+libtool: link: ranlib .libs/libffi_convenience.a
+ranlib: file: .libs/libffi_convenience.a(ffi.o) has no symbols
+ranlib: file: .libs/libffi_convenience.a(darwin.o) has no symbols
+libtool: link: ( cd ".libs" && rm -f "libffi_convenience.la" && ln -s "../libffi_convenience.la" "libffi_convenience.la" )
+compiling AbstractMemory.c
+AbstractMemory.c:246:1: warning: 'memory_put_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_write_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_get_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_read_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_write_array_of_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_read_array_of_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_put_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_write_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_get_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_read_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_write_array_of_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_read_array_of_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:398:1: warning: 'memory_read_array_of_string' defined but not used [-Wunused-function]
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+compiling ClosurePool.c
+compiling DataConverter.c
+compiling DynamicLibrary.c
+compiling ffi.c
+compiling Function.c
+Function.c: In function 'callback_invoke':
+Function.c:469:14: warning: variable 'empty' set but not used [-Wunused-but-set-variable]
+compiling FunctionInfo.c
+FunctionInfo.c: In function 'fntype_initialize':
+FunctionInfo.c:100:27: warning: variable 'rbConvention' set but not used [-Wunused-but-set-variable]
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+MappedType.c: In function 'mapped_initialize':
+MappedType.c:63:11: warning: unused variable 't' [-Wunused-variable]
+compiling MemoryPointer.c
+MemoryPointer.c:141:1: warning: 'memptr_mark' defined but not used [-Wunused-function]
+compiling MethodHandle.c
+MethodHandle.c: In function 'rbffi_MethodHandle_Init':
+MethodHandle.c:333:16: warning: unused variable 'ffiStatus' [-Wunused-variable]
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling StructLayout.c
+StructLayout.c: In function 'struct_field_initialize':
+StructLayout.c:86:9: warning: variable 'nargs' set but not used [-Wunused-but-set-variable]
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+Variadic.c: In function 'variadic_initialize':
+Variadic.c:97:8: warning: unused variable 'rbConventionStr' [-Wunused-variable]
+Variadic.c:95:11: warning: variable 'convention' set but not used [-Wunused-but-set-variable]
+linking shared-object ffi_c.bundle
+
+make  install
+cd "/Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi-x86_64-darwin12.5.0" && make
+make "AR_FLAGS=" "CC_FOR_BUILD=" "CFLAGS=-Wall -fexceptions" "CXXFLAGS=" "CFLAGS_FOR_BUILD=" "CFLAGS_FOR_TARGET=" "INSTALL=/usr/bin/install -c" "INSTALL_DATA=/usr/bin/install -c -m 644" "INSTALL_PROGRAM=/usr/bin/install -c" "INSTALL_SCRIPT=/usr/bin/install -c" "JC1FLAGS=" "LDFLAGS=" "LIBCFLAGS=" "LIBCFLAGS_FOR_TARGET=" "MAKE=make" "MAKEINFO=/bin/sh /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/libffi/missing --run makeinfo " "PICFLAG=" "PICFLAG_FOR_TARGET=" "RUNTESTFLAGS=" "SHELL=/bin/sh" "exec_prefix=/usr/local" "infodir=/usr/local/share/info" "libdir=/usr/local/lib" "mandir=/usr/local/share/man" "prefix=/usr/local" "AR=ar" "AS=as" "CC=/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6" "CXX=c++" "LD=ld" "NM=/usr/bin/nm" "RANLIB=ranlib" "DESTDIR=" all-recursive
+Making all in include
+make[3]: Nothing to be done for `all'.
+Making all in testsuite
+make[3]: Nothing to be done for `all'.
+Making all in man
+make[3]: Nothing to be done for `all'.
+make[3]: Nothing to be done for `all-am'.
+compiling AbstractMemory.c
+AbstractMemory.c:246:1: warning: 'memory_put_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_write_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_get_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_read_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_write_array_of_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:246:1: warning: 'memory_read_array_of_longdouble' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_put_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_write_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_get_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_read_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_write_array_of_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:282:1: warning: 'memory_read_array_of_bool' defined but not used [-Wunused-function]
+AbstractMemory.c:398:1: warning: 'memory_read_array_of_string' defined but not used [-Wunused-function]
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+compiling ClosurePool.c
+compiling DataConverter.c
+compiling DynamicLibrary.c
+compiling ffi.c
+compiling Function.c
+Function.c: In function 'callback_invoke':
+Function.c:469:14: warning: variable 'empty' set but not used [-Wunused-but-set-variable]
+compiling FunctionInfo.c
+FunctionInfo.c: In function 'fntype_initialize':
+FunctionInfo.c:100:27: warning: variable 'rbConvention' set but not used [-Wunused-but-set-variable]
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+MappedType.c: In function 'mapped_initialize':
+MappedType.c:63:11: warning: unused variable 't' [-Wunused-variable]
+compiling MemoryPointer.c
+MemoryPointer.c:141:1: warning: 'memptr_mark' defined but not used [-Wunused-function]
+compiling MethodHandle.c
+MethodHandle.c: In function 'rbffi_MethodHandle_Init':
+MethodHandle.c:333:16: warning: unused variable 'ffiStatus' [-Wunused-variable]
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByReference.c
+compiling StructByValue.c
+compiling StructLayout.c
+StructLayout.c: In function 'struct_field_initialize':
+StructLayout.c:86:9: warning: variable 'nargs' set but not used [-Wunused-but-set-variable]
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+Variadic.c: In function 'variadic_initialize':
+Variadic.c:97:8: warning: unused variable 'rbConventionStr' [-Wunused-variable]
+Variadic.c:95:11: warning: variable 'convention' set but not used [-Wunused-but-set-variable]
+linking shared-object ffi_c.bundle
+/usr/bin/install -c -m 0755 ffi_c.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/ffi-1.1.5/ext/ffi_c/.gem.20140403-24377-70do8n
+installing default ffi_c libraries

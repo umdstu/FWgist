@@ -1,0 +1,12 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling parser.c
+linking shared-object json/ext/parser.bundle
+
+make  install
+/usr/bin/install -c -m 0755 parser.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/json-1.7.7/ext/json/ext/parser/.gem.20140403-24377-smjzyj/json/ext
+installing default parser libraries

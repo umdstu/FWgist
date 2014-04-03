@@ -1,0 +1,12 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling faye_websocket_mask.c
+linking shared-object faye_websocket_mask.bundle
+
+make  install
+/usr/bin/install -c -m 0755 faye_websocket_mask.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/faye-websocket-0.4.6/ext/faye_websocket_mask/.gem.20140403-24377-l44iwh
+installing default faye_websocket_mask libraries

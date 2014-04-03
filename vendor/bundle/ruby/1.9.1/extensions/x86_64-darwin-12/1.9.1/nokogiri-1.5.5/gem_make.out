@@ -1,0 +1,71 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+checking for libxml/parser.h... yes
+checking for libxslt/xslt.h... yes
+checking for libexslt/exslt.h... yes
+checking for iconv_open() in iconv.h... no
+checking for iconv_open() in -liconv... yes
+checking for xmlParseDoc() in -lxml2... yes
+checking for xsltParseStylesheetDoc() in -lxslt... yes
+checking for exsltFuncRegister() in -lexslt... yes
+checking for xmlHasFeature()... yes
+checking for xmlFirstElementChild()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetParserStructuredErrors()... yes
+checking for xmlRelaxNGSetValidStructuredErrors()... yes
+checking for xmlSchemaSetValidStructuredErrors()... yes
+checking for xmlSchemaSetParserStructuredErrors()... yes
+creating Makefile
+
+make  clean
+
+make
+compiling html_document.c
+compiling html_element_description.c
+html_element_description.c: In function 'get_description':
+html_element_description.c:249:10: warning: cast discards '__attribute__((const))' qualifier from pointer target type [-Wcast-qual]
+compiling html_entity_lookup.c
+compiling html_sax_parser_context.c
+compiling html_sax_push_parser.c
+compiling nokogiri.c
+compiling xml_attr.c
+compiling xml_attribute_decl.c
+compiling xml_cdata.c
+compiling xml_comment.c
+compiling xml_document.c
+xml_document.c: In function 'set_encoding':
+xml_document.c:159:12: warning: cast discards '__attribute__((const))' qualifier from pointer target type [-Wcast-qual]
+xml_document.c: In function 'canonicalize':
+xml_document.c:505:15: warning: cast discards '__attribute__((const))' qualifier from pointer target type [-Wcast-qual]
+compiling xml_document_fragment.c
+compiling xml_dtd.c
+compiling xml_element_content.c
+compiling xml_element_decl.c
+compiling xml_encoding_handler.c
+compiling xml_entity_decl.c
+compiling xml_entity_reference.c
+compiling xml_io.c
+compiling xml_libxml2_hacks.c
+compiling xml_namespace.c
+compiling xml_node.c
+compiling xml_node_set.c
+xml_node_set.c: In function 'dealloc_namespace':
+xml_node_set.c:9:13: warning: cast discards '__attribute__((const))' qualifier from pointer target type [-Wcast-qual]
+xml_node_set.c:11:13: warning: cast discards '__attribute__((const))' qualifier from pointer target type [-Wcast-qual]
+compiling xml_processing_instruction.c
+compiling xml_reader.c
+compiling xml_relax_ng.c
+compiling xml_sax_parser.c
+compiling xml_sax_parser_context.c
+compiling xml_sax_push_parser.c
+compiling xml_schema.c
+compiling xml_syntax_error.c
+compiling xml_text.c
+compiling xml_xpath_context.c
+compiling xslt_stylesheet.c
+linking shared-object nokogiri/nokogiri.bundle
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.1/lib'
+ld: warning: directory not found for option '-L/opt/local/lib'
+
+make  install
+/usr/bin/install -c -m 0755 nokogiri.bundle /Users/capollo/develop/gistie/vendor/bundle/ruby/1.9.1/gems/nokogiri-1.5.5/ext/nokogiri/.gem.20140403-24377-dreq49/nokogiri
+installing default nokogiri libraries
