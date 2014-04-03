@@ -125,6 +125,7 @@ GEM
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (3.1.1)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -189,6 +190,7 @@ DEPENDENCIES
   poltergeist
   pygments.rb
   rails (~> 3.2.12)
+  redcarpet
   rspec-rails
   rugged (= 0.17.0.b6)
   sass-rails (~> 3.2.3)
