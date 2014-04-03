@@ -16,6 +16,7 @@
 //= require twitter/bootstrap
 //= require ace/ace
 //= require ace/theme-monokai
+//= require holder
 //= require_tree .
 
 
