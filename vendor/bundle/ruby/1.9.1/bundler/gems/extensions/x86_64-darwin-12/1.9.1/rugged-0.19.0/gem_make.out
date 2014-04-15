@@ -1,0 +1,45 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+checking for cmake... yes
+checking for gmake... no
+checking for make... yes
+checking for pkg-config... yes
+ -- cmake .. -DBUILD_CLAR=OFF -DTHREADSAFE=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS=-fPIC
+ -- /usr/bin/make
+checking for main() in -lgit2... yes
+checking for git2.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling rugged.c
+compiling rugged_blame.c
+compiling rugged_blob.c
+compiling rugged_branch.c
+compiling rugged_branch_collection.c
+compiling rugged_commit.c
+compiling rugged_config.c
+compiling rugged_cred.c
+compiling rugged_diff.c
+compiling rugged_diff_delta.c
+compiling rugged_diff_hunk.c
+compiling rugged_diff_line.c
+compiling rugged_index.c
+compiling rugged_note.c
+compiling rugged_object.c
+compiling rugged_patch.c
+compiling rugged_reference.c
+compiling rugged_reference_collection.c
+compiling rugged_remote.c
+compiling rugged_repo.c
+compiling rugged_revwalk.c
+compiling rugged_settings.c
+compiling rugged_signature.c
+compiling rugged_tag.c
+compiling rugged_tag_collection.c
+compiling rugged_tree.c
+linking shared-object rugged/rugged.bundle
+
+make  install
+/usr/bin/install -c -m 0755 rugged.bundle /Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/.gem.20140415-52032-zz8t5f/rugged
+installing default rugged libraries

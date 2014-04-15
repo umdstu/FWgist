@@ -42,7 +42,8 @@ class RepoTree
   end
 
   def lookup(sha)
-    repo.lookup(sha)
+    oid = sha.class == String ? sha : sha.oid
+    repo.lookup(oid)
   end
 
   private

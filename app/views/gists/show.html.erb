@@ -28,7 +28,9 @@
   </table>
 
   <%- @tree.each do |b| %>
+  <%= b.inspect %>
     <% gb = GistFilePresenter.new(b) %>
+    <%= gb.inspect %>
     <div class="file">
       <div class="row">
         <div class="meta span8"> <b><%= fa_icon('file-text', :text => b.name) %></b></div>

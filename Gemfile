@@ -7,10 +7,11 @@ gem 'rails', '~> 3.2.12'
 
 gem 'sqlite3'
 
-gem 'rugged', '0.17.0.b6'
+gem 'rugged', git: 'https://github.com/libgit2/rugged.git', branch: 'development', submodules: true
 gem 'pygments.rb'
 gem 'ace-rails-ap'
 gem 'redcarpet'
+gem 'diffy'
 
 # Gems used only for assets and not required
 # in production environments by default.

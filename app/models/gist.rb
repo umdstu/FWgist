@@ -19,7 +19,7 @@ class Gist < ActiveRecord::Base
       errors.add(:gist_files, "duplicate names: #{dups.join(',')}")
   end
 
-  def dup_names(blobs)
+  def dup_names(files)
     duplicates = files.map(&:name).
       group_by {|b| b }.
       values.

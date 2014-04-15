@@ -10,6 +10,10 @@ class GistsController < ApplicationController
     @tree = @gist.tree(params[:revision].presence)
   end
 
+  def revisions
+    @gist = Gist.find(params[:id])
+  end
+
   def new
     @gist = Gist.new
   end

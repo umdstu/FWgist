@@ -5,10 +5,16 @@ class GistFilePresenter
   attr_reader :gist_file
 
   def initialize(file)
+    #current file
     @gist_file = file
+    #Rails.logger.info file.instance_variable_get(:@tree).instance_variable_get(:@tree).diff(nil).deltas
+    #prev file
+    #@prev_file = 
   end
 
   def highlight(filename, src)
+    # src = current version
+    # prev = previous version
     HighlightedSource.new(name, src).to_formatted_html.html_safe
   end
 

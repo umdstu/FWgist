@@ -4,6 +4,10 @@ class RepoLog
     def initialize(commit)
       @commit = commit
     end
+    
+    def gist
+      @commit.methods
+    end
 
     def created_at
       @commit.time

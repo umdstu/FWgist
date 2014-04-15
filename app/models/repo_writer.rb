@@ -74,7 +74,7 @@ module RepoWriter
       r.create(repo, ref_name, commit_oid)
     else
       ref = r.lookup(repo, ref_name)
-      ref.target = commit_oid
+      ref.set_target(commit_oid)
     end
     commit_oid
   end

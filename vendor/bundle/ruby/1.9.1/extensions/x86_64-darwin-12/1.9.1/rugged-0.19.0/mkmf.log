@@ -1,0 +1,719 @@
+find_executable: checking for gmake... -------------------- no
+
+--------------------
+
+find_executable: checking for make... -------------------- yes
+
+--------------------
+
+"/usr/bin/make -f Makefile.embed"
+uname: illegal option -- o
+usage: uname [-amnprsv]
+uname: illegal option -- o
+usage: uname [-amnprsv]
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/attr.o src/attr.c
+src/attr.c:46:21: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector files = GIT_VECTOR_INIT;
+                           ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/attr.c:99:21: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector files = GIT_VECTOR_INIT;
+                           ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/attr.c:162:21: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector files = GIT_VECTOR_INIT;
+                           ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/attr.c:9:1: warning: unused function 'kh_clear_str' [-Wunused-function]
+GIT__USE_STRMAP;
+^
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:206:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_clear_##name(kh_##name##_t *h)                                            \
+                   ^
+<scratch space>:169:1: note: expanded from here
+kh_clear_str
+^
+src/attr.c:9:1: warning: unused function 'kh_del_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:333:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_del_##name(kh_##name##_t *h, khint_t x)                           \
+                   ^
+<scratch space>:3:1: note: expanded from here
+kh_del_str
+^
+5 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/attr_file.o src/attr_file.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/blob.o src/blob.c
+src/blob.c:172:30: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+                git_vector write_filters = GIT_VECTOR_INIT;
+                                           ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/blob.c:272:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/branch.o src/branch.c
+src/branch.c:322:31: warning: missing field 'count' initializer [-Wmissing-field-initializers]
+        git_strarray remote_list = {0};
+                                     ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/buf_text.o src/buf_text.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/buffer.o src/buffer.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/cache.o src/cache.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/checkout.o src/checkout.c
+src/checkout.c:603:24: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector pathspec = GIT_VECTOR_INIT, *deltas;
+                              ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/checkout.c:720:23: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector filters = GIT_VECTOR_INIT;
+                             ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/checkout.c:1268:25: warning: missing field 'diff' initializer [-Wmissing-field-initializers]
+        checkout_data data = {0};
+                               ^
+src/checkout.c:1269:31: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options diff_opts = GIT_DIFF_OPTIONS_INIT;
+                                     ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+4 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/clone.o src/clone.c
+src/clone.c:423:38: warning: missing field 'disable_filters' initializer [-Wmissing-field-initializers]
+        git_clone_options default_options = GIT_CLONE_OPTIONS_INIT;
+                                            ^
+include/git2/clone.h:88:112: note: expanded from macro 'GIT_CLONE_OPTIONS_INIT'
+#define GIT_CLONE_OPTIONS_INIT {GIT_CLONE_OPTIONS_VERSION, {GIT_CHECKOUT_OPTS_VERSION, GIT_CHECKOUT_SAFE_CREATE}}
+                                                                                                               ^
+src/clone.c:423:38: warning: missing field 'bare' initializer [-Wmissing-field-initializers]
+include/git2/clone.h:88:113: note: expanded from macro 'GIT_CLONE_OPTIONS_INIT'
+#define GIT_CLONE_OPTIONS_INIT {GIT_CLONE_OPTIONS_VERSION, {GIT_CHECKOUT_OPTS_VERSION, GIT_CHECKOUT_SAFE_CREATE}}
+                                                                                                                ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/commit.o src/commit.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/commit_list.o src/commit_list.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/compress.o src/compress.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/config.o src/config.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/config_cache.o src/config_cache.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/config_file.o src/config_file.c
+src/config_file.c:1094:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/config_file.c:23:1: warning: unused function 'kh_clear_str' [-Wunused-function]
+GIT__USE_STRMAP;
+^
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:206:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_clear_##name(kh_##name##_t *h)                                            \
+                   ^
+<scratch space>:169:1: note: expanded from here
+kh_clear_str
+^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/crlf.o src/crlf.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/date.o src/date.c
+src/date.c:657:9: warning: missing field 'fn' initializer [-Wmissing-field-initializers]
+        { NULL }
+               ^
+src/date.c:674:9: warning: missing field 'length' initializer [-Wmissing-field-initializers]
+        { NULL }
+               ^
+src/date.c:831:19: warning: missing field 'tm_min' initializer [-Wmissing-field-initializers]
+        struct tm tm = {0}, now;
+                         ^
+3 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/delta-apply.o src/delta-apply.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/delta.o src/delta.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff.o src/diff.c
+src/diff.c:331:26: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options dflt = GIT_DIFF_OPTIONS_INIT;
+                                ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/diff.c:544:24: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+                git_vector filters = GIT_VECTOR_INIT;
+                                     ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_driver.o src/diff_driver.c
+src/diff_driver.c:51:30: warning: missing field 'fn_patterns' initializer [-Wmissing-field-initializers]
+        { DIFF_DRIVER_AUTO,   0, 0, },
+                                    ^
+src/diff_driver.c:52:49: warning: missing field 'fn_patterns' initializer [-Wmissing-field-initializers]
+        { DIFF_DRIVER_BINARY, GIT_DIFF_FORCE_BINARY, 0 },
+                                                       ^
+src/diff_driver.c:53:47: warning: missing field 'fn_patterns' initializer [-Wmissing-field-initializers]
+        { DIFF_DRIVER_TEXT,   GIT_DIFF_FORCE_TEXT, 0 },
+                                                     ^
+src/diff_driver.c:19:1: warning: unused function 'kh_clear_str' [-Wunused-function]
+GIT__USE_STRMAP;
+^
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:206:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_clear_##name(kh_##name##_t *h)                                            \
+                   ^
+<scratch space>:165:1: note: expanded from here
+kh_clear_str
+^
+src/diff_driver.c:19:1: warning: unused function 'kh_del_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:333:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_del_##name(kh_##name##_t *h, khint_t x)                           \
+                   ^
+<scratch space>:179:1: note: expanded from here
+kh_del_str
+^
+5 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_file.o src/diff_file.c
+src/diff_file.c:309:23: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector filters = GIT_VECTOR_INIT;
+                             ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_patch.o src/diff_patch.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_print.o src/diff_print.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_tform.o src/diff_tform.c
+src/diff_tform.c:333:20: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector onto = GIT_VECTOR_INIT;
+                          ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/diff_xdiff.o src/diff_xdiff.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/errors.o src/errors.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/fetch.o src/fetch.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/fetchhead.o src/fetchhead.c
+src/fetchhead.c:105:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/filebuf.o src/filebuf.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/fileops.o src/fileops.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/filter.o src/filter.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/fnmatch.o src/fnmatch.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/global.o src/global.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/graph.o src/graph.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/hash.o src/hash.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/hashsig.o src/hashsig.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/ignore.o src/ignore.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/index.o src/index.c
+src/index.c:446:33: warning: missing field 'size' initializer [-Wmissing-field-initializers]
+        git_futils_filestamp stamp = {0};
+                                       ^
+src/index.c:478:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/index.c:1617:35: warning: missing field 'version' initializer [-Wmissing-field-initializers]
+        struct index_header header = { 0 };
+                                         ^
+src/index.c:2022:23: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector entries = GIT_VECTOR_INIT;
+                             ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+4 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/indexer.o src/indexer.c
+src/indexer.c:582:29: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf index_file = {0};
+                                   ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/iterator.o src/iterator.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/merge.o src/merge.c
+src/merge.c:514:34: warning: missing field 'path' initializer [-Wmissing-field-initializers]
+        git_merge_file_input ancestor = GIT_MERGE_FILE_INPUT_INIT,
+                                        ^
+src/merge_file.h:23:37: note: expanded from macro 'GIT_MERGE_FILE_INPUT_INIT'
+#define GIT_MERGE_FILE_INPUT_INIT       {0}
+                                          ^
+src/merge.c:515:10: warning: missing field 'path' initializer [-Wmissing-field-initializers]
+                ours = GIT_MERGE_FILE_INPUT_INIT,
+                       ^
+src/merge_file.h:23:37: note: expanded from macro 'GIT_MERGE_FILE_INPUT_INIT'
+#define GIT_MERGE_FILE_INPUT_INIT       {0}
+                                          ^
+src/merge.c:516:12: warning: missing field 'path' initializer [-Wmissing-field-initializers]
+                theirs = GIT_MERGE_FILE_INPUT_INIT;
+                         ^
+src/merge_file.h:23:37: note: expanded from macro 'GIT_MERGE_FILE_INPUT_INIT'
+#define GIT_MERGE_FILE_INPUT_INIT       {0}
+                                          ^
+src/merge.c:517:33: warning: missing field 'path' initializer [-Wmissing-field-initializers]
+        git_merge_file_result result = GIT_MERGE_FILE_RESULT_INIT;
+                                       ^
+src/merge_file.h:35:38: note: expanded from macro 'GIT_MERGE_FILE_RESULT_INIT'
+#define GIT_MERGE_FILE_RESULT_INIT      {0}
+                                          ^
+src/merge.c:649:34: warning: missing field 'path' initializer [-Wmissing-field-initializers]
+        git_diff_file diff_file = {{{0}}};
+                                        ^
+src/merge.c:1250:40: warning: missing field 'prev_path' initializer [-Wmissing-field-initializers]
+        struct merge_diff_df_data df_data = {0};
+                                              ^
+src/merge.c:1389:30: warning: missing field 'flags' initializer [-Wmissing-field-initializers]
+                git_merge_tree_opts init = GIT_MERGE_TREE_OPTS_INIT;
+                                           ^
+include/git2/merge.h:65:62: note: expanded from macro 'GIT_MERGE_TREE_OPTS_INIT'
+#define GIT_MERGE_TREE_OPTS_INIT {GIT_MERGE_TREE_OPTS_VERSION}
+                                                             ^
+src/merge.c:1616:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/merge.c:1643:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/merge.c:1675:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/merge.c:1891:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/merge.c:1895:24: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector matching = GIT_VECTOR_INIT;
+                              ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+12 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/merge_file.o src/merge_file.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/message.o src/message.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/mwindow.o src/mwindow.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/netops.o src/netops.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/notes.o src/notes.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/object.o src/object.c
+src/object.c:19:18: warning: unused variable 'OBJECT_BASE_SIZE' [-Wunused-const-variable]
+static const int OBJECT_BASE_SIZE = 4096;
+                 ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/object_api.o src/object_api.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/odb.o src/odb.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/odb_loose.o src/odb_loose.c
+src/odb_loose.c:871:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf fbuf = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/odb_pack.o src/odb_pack.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/oid.o src/oid.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/pack-objects.o src/pack-objects.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/pack.o src/pack.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/path.o src/path.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/pathspec.o src/pathspec.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/pool.o src/pool.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/posix.o src/posix.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/pqueue.o src/pqueue.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/push.o src/push.c
+src/push.c:437:23: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector commits = GIT_VECTOR_INIT;
+                             ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/refdb.o src/refdb.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/refdb_fs.o src/refdb_fs.c
+src/refdb_fs.c:791:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf file = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/refdb_fs.c:972:26: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf pack_file = GIT_FILEBUF_INIT;
+                                ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/reflog.o src/reflog.c
+src/reflog.c:253:21: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf fbuf = GIT_FILEBUF_INIT;
+                           ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/refs.o src/refs.c
+src/refs.c:25:1: warning: unused function 'kh_init_str' [-Wunused-function]
+GIT__USE_STRMAP;
+^
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:195:23: note: expanded from macro '__KHASH_IMPL'
+        SCOPE kh_##name##_t *kh_init_##name(void) {                                                     \
+                             ^
+<scratch space>:38:1: note: expanded from here
+kh_init_str
+^
+src/refs.c:25:1: warning: unused function 'kh_destroy_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:198:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_destroy_##name(kh_##name##_t *h)                                          \
+                   ^
+<scratch space>:43:1: note: expanded from here
+kh_destroy_str
+^
+src/refs.c:25:1: warning: unused function 'kh_clear_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:206:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_clear_##name(kh_##name##_t *h)                                            \
+                   ^
+<scratch space>:46:1: note: expanded from here
+kh_clear_str
+^
+src/refs.c:25:1: warning: unused function 'kh_get_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:213:16: note: expanded from macro '__KHASH_IMPL'
+        SCOPE khint_t kh_get_##name(const kh_##name##_t *h, khkey_t key)        \
+                      ^
+<scratch space>:49:1: note: expanded from here
+kh_get_str
+^
+src/refs.c:25:1: warning: unused function 'kh_put_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:291:16: note: expanded from macro '__KHASH_IMPL'
+        SCOPE khint_t kh_put_##name(kh_##name##_t *h, khkey_t key, int *ret) \
+                      ^
+<scratch space>:55:1: note: expanded from here
+kh_put_str
+^
+src/refs.c:25:1: warning: unused function 'kh_del_str' [-Wunused-function]
+src/strmap.h:22:2: note: expanded from macro 'GIT__USE_STRMAP'
+        __KHASH_IMPL(str, static kh_inline, const char *, void *, 1, kh_str_hash_func, kh_str_hash_equal)
+        ^
+src/khash.h:333:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_del_##name(kh_##name##_t *h, khint_t x)                           \
+                   ^
+<scratch space>:60:1: note: expanded from here
+kh_del_str
+^
+6 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/refspec.o src/refspec.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/remote.o src/remote.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/repository.o src/repository.c
+src/repository.c:814:20: warning: missing field 'path_lock' initializer [-Wmissing-field-initializers]
+        git_filebuf ref = GIT_FILEBUF_INIT;
+                          ^
+src/filebuf.h:52:28: note: expanded from macro 'GIT_FILEBUF_INIT'
+#define GIT_FILEBUF_INIT {0}
+                           ^
+src/repository.c:1348:37: warning: missing field 'flags' initializer [-Wmissing-field-initializers]
+        git_repository_init_options opts = GIT_REPOSITORY_INIT_OPTIONS_INIT;
+                                           ^
+include/git2/repository.h:266:78: note: expanded from macro 'GIT_REPOSITORY_INIT_OPTIONS_INIT'
+#define GIT_REPOSITORY_INIT_OPTIONS_INIT {GIT_REPOSITORY_INIT_OPTIONS_VERSION}
+                                                                             ^
+src/repository.c:1653:23: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector filters = GIT_VECTOR_INIT;
+                             ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+3 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/reset.o src/reset.c
+src/reset.c:28:26: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options opts = GIT_DIFF_OPTIONS_INIT;
+                                ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/reset.c:102:27: warning: missing field 'checkout_strategy' initializer [-Wmissing-field-initializers]
+        git_checkout_opts opts = GIT_CHECKOUT_OPTS_INIT;
+                                 ^
+include/git2/checkout.h:244:58: note: expanded from macro 'GIT_CHECKOUT_OPTS_INIT'
+#define GIT_CHECKOUT_OPTS_INIT {GIT_CHECKOUT_OPTS_VERSION}
+                                                         ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/revparse.o src/revparse.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/revwalk.o src/revwalk.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/sha1_lookup.o src/sha1_lookup.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/signature.o src/signature.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/stash.o src/stash.c
+src/stash.c:225:26: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options opts = GIT_DIFF_OPTIONS_INIT;
+                                ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/stash.c:226:26: warning: missing field 'error' initializer [-Wmissing-field-initializers]
+        struct cb_data data = {0};
+                                ^
+src/stash.c:315:26: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options opts = GIT_DIFF_OPTIONS_INIT;
+                                ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/stash.c:316:26: warning: missing field 'error' initializer [-Wmissing-field-initializers]
+        struct cb_data data = {0};
+                                ^
+src/stash.c:474:28: warning: missing field 'show' initializer [-Wmissing-field-initializers]
+        git_status_options opts = GIT_STATUS_OPTIONS_INIT;
+                                  ^
+include/git2/status.h:169:60: note: expanded from macro 'GIT_STATUS_OPTIONS_INIT'
+#define GIT_STATUS_OPTIONS_INIT {GIT_STATUS_OPTIONS_VERSION}
+                                                           ^
+src/stash.c:500:27: warning: missing field 'checkout_strategy' initializer [-Wmissing-field-initializers]
+        git_checkout_opts opts = GIT_CHECKOUT_OPTS_INIT;
+                                 ^
+include/git2/checkout.h:244:58: note: expanded from macro 'GIT_CHECKOUT_OPTS_INIT'
+#define GIT_CHECKOUT_OPTS_INIT {GIT_CHECKOUT_OPTS_VERSION}
+                                                         ^
+6 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/status.o src/status.c
+src/status.c:253:29: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+        git_diff_options diffopt = GIT_DIFF_OPTIONS_INIT;
+                                   ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/status.c:254:39: warning: missing field 'flags' initializer [-Wmissing-field-initializers]
+        git_diff_find_options findopts_i2w = GIT_DIFF_FIND_OPTIONS_INIT;
+                                             ^
+include/git2/diff.h:516:66: note: expanded from macro 'GIT_DIFF_FIND_OPTIONS_INIT'
+#define GIT_DIFF_FIND_OPTIONS_INIT {GIT_DIFF_FIND_OPTIONS_VERSION}
+                                                                 ^
+src/status.c:469:28: warning: missing field 'show' initializer [-Wmissing-field-initializers]
+        git_status_options opts = GIT_STATUS_OPTIONS_INIT;
+                                  ^
+include/git2/status.h:169:60: note: expanded from macro 'GIT_STATUS_OPTIONS_INIT'
+#define GIT_STATUS_OPTIONS_INIT {GIT_STATUS_OPTIONS_VERSION}
+                                                           ^
+src/status.c:470:34: warning: missing field 'count' initializer [-Wmissing-field-initializers]
+        struct status_file_info sfi = {0};
+                                        ^
+4 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/submodule.o src/submodule.c
+src/submodule.c:153:20: warning: missing field '_cmp' initializer [-Wmissing-field-initializers]
+        git_vector seen = GIT_VECTOR_INIT;
+                          ^
+src/vector.h:22:27: note: expanded from macro 'GIT_VECTOR_INIT'
+#define GIT_VECTOR_INIT {0}
+                          ^
+src/submodule.c:215:40: warning: missing field 'flags' initializer [-Wmissing-field-initializers]
+        git_repository_init_options initopt = GIT_REPOSITORY_INIT_OPTIONS_INIT;
+                                              ^
+include/git2/repository.h:266:78: note: expanded from macro 'GIT_REPOSITORY_INIT_OPTIONS_INIT'
+#define GIT_REPOSITORY_INIT_OPTIONS_INIT {GIT_REPOSITORY_INIT_OPTIONS_VERSION}
+                                                                             ^
+src/submodule.c:1466:26: warning: missing field 'interhunk_lines' initializer [-Wmissing-field-initializers]
+                git_diff_options opt = GIT_DIFF_OPTIONS_INIT;
+                                       ^
+include/git2/diff.h:332:76: note: expanded from macro 'GIT_DIFF_OPTIONS_INIT'
+#define GIT_DIFF_OPTIONS_INIT {GIT_DIFF_OPTIONS_VERSION, GIT_DIFF_NORMAL, 3}
+                                                                           ^
+src/submodule.c:68:1: warning: unused function 'kh_clear_str' [-Wunused-function]
+__KHASH_IMPL(
+^
+src/khash.h:206:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_clear_##name(kh_##name##_t *h)                                            \
+                   ^
+<scratch space>:169:1: note: expanded from here
+kh_clear_str
+^
+src/submodule.c:68:1: warning: unused function 'kh_del_str' [-Wunused-function]
+src/khash.h:333:13: note: expanded from macro '__KHASH_IMPL'
+        SCOPE void kh_del_##name(kh_##name##_t *h, khint_t x)                           \
+                   ^
+<scratch space>:3:1: note: expanded from here
+kh_del_str
+^
+5 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/tag.o src/tag.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/thread-utils.o src/thread-utils.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/trace.o src/trace.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transport.o src/transport.c
+src/transport.c:42:13: warning: missing field 'param' initializer [-Wmissing-field-initializers]
+        {NULL, 0, 0}
+                   ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/tree-cache.o src/tree-cache.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/tree.o src/tree.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/tsort.o src/tsort.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/util.o src/util.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/vector.o src/vector.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/cred.o src/transports/cred.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/cred_helpers.o src/transports/cred_helpers.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/git.o src/transports/git.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/http.o src/transports/http.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/local.o src/transports/local.c
+src/transports/local.c:124:29: warning: missing field 'count' initializer [-Wmissing-field-initializers]
+        git_strarray ref_names = {0};
+                                   ^
+src/transports/local.c:539:25: warning: missing field 'progress_cb' initializer [-Wmissing-field-initializers]
+                foreach_data data = {0};
+                                      ^
+2 warnings generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/smart.o src/transports/smart.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/smart_pkt.o src/transports/smart_pkt.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/smart_protocol.o src/transports/smart_protocol.c
+src/transports/smart_protocol.c:451:44: warning: missing field 'payload' initializer [-Wmissing-field-initializers]
+        struct network_packetsize_payload npp = {0};
+                                                  ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/ssh.o src/transports/ssh.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/transports/winhttp.o src/transports/winhttp.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xdiffi.o src/xdiff/xdiffi.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xemit.o src/xdiff/xemit.c
+src/xdiff/xemit.c:141:35: warning: missing field 'buf' initializer [-Wmissing-field-initializers]
+        struct func_line func_line = { 0 };
+                                         ^
+1 warning generated.
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xhistogram.o src/xdiff/xhistogram.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xmerge.o src/xdiff/xmerge.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xpatience.o src/xdiff/xpatience.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xprepare.o src/xdiff/xprepare.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/xdiff/xutils.o src/xdiff/xutils.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/http-parser/http_parser.o deps/http-parser/http_parser.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/adler32.o deps/zlib/adler32.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/crc32.o deps/zlib/crc32.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/deflate.o deps/zlib/deflate.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/inffast.o deps/zlib/inffast.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/inflate.o deps/zlib/inflate.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/inftrees.o deps/zlib/inftrees.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/trees.o deps/zlib/trees.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o deps/zlib/zutil.o deps/zlib/zutil.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/hash/hash_generic.o src/hash/hash_generic.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/unix/map.o src/unix/map.c
+cc -g -I. -Isrc -Iinclude -Ideps/http-parser -Ideps/zlib -DNO_VIZ -DSTDC -DNO_GZIP -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE  -Wall -Wextra -O2  -fPIC   -c -o src/unix/realpath.o src/unix/realpath.c
+rm -f libgit2.a
+ar cq libgit2.a src/attr.o src/attr_file.o src/blob.o src/branch.o src/buf_text.o src/buffer.o src/cache.o src/checkout.o src/clone.o src/commit.o src/commit_list.o src/compress.o src/config.o src/config_cache.o src/config_file.o src/crlf.o src/date.o src/delta-apply.o src/delta.o src/diff.o src/diff_driver.o src/diff_file.o src/diff_patch.o src/diff_print.o src/diff_tform.o src/diff_xdiff.o src/errors.o src/fetch.o src/fetchhead.o src/filebuf.o src/fileops.o src/filter.o src/fnmatch.o src/global.o src/graph.o src/hash.o src/hashsig.o src/ignore.o src/index.o src/indexer.o src/iterator.o src/merge.o src/merge_file.o src/message.o src/mwindow.o src/netops.o src/notes.o src/object.o src/object_api.o src/odb.o src/odb_loose.o src/odb_pack.o src/oid.o src/pack-objects.o src/pack.o src/path.o src/pathspec.o src/pool.o src/posix.o src/pqueue.o src/push.o src/refdb.o src/refdb_fs.o src/reflog.o src/refs.o src/refspec.o src/remote.o src/repository.o src/reset.o src/revparse.o src/revwalk.o src/sha1_lookup.o src/signature.o src/stash.o src/status.o src/submodule.o src/tag.o src/thread-utils.o src/trace.o src/transport.o src/tree-cache.o src/tree.o src/tsort.o src/util.o src/vector.o src/transports/cred.o src/transports/cred_helpers.o src/transports/git.o src/transports/http.o src/transports/local.o src/transports/smart.o src/transports/smart_pkt.o src/transports/smart_protocol.o src/transports/ssh.o src/transports/winhttp.o src/xdiff/xdiffi.o src/xdiff/xemit.o src/xdiff/xhistogram.o src/xdiff/xmerge.o src/xdiff/xpatience.o src/xdiff/xprepare.o src/xdiff/xutils.o deps/http-parser/http_parser.o deps/zlib/adler32.o deps/zlib/crc32.o deps/zlib/deflate.o deps/zlib/inffast.o deps/zlib/inflate.o deps/zlib/inftrees.o deps/zlib/trees.o deps/zlib/zutil.o src/hash/hash_generic.o src/unix/map.o src/unix/realpath.o
+/usr/bin/ranlib: file: libgit2.a(ssh.o) has no symbols
+/usr/bin/ranlib: file: libgit2.a(winhttp.o) has no symbols
+/usr/bin/ranlib: file: libgit2.a(realpath.o) has no symbols
+ranlib libgit2.a
+ranlib: file: libgit2.a(ssh.o) has no symbols
+ranlib: file: libgit2.a(winhttp.o) has no symbols
+ranlib: file: libgit2.a(realpath.o) has no symbols
+have_library: checking for main() in -lgit2_embed... -------------------- yes
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest  -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged/../../vendor/libgit2/include -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged      -lruby.1.9.1  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest  -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged/../../vendor/libgit2/include -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged      -lruby.1.9.1 -lgit2_embed  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:4:53: error: 'main' undeclared (first use in this function)
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest  -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged/../../vendor/libgit2/include -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged      -lruby.1.9.1 -lgit2_embed  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:4:1: warning: implicit declaration of function 'main' [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { main(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_header: checking for git2.h... -------------------- yes
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -E  -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged/../../vendor/libgit2/include -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <git2.h>
+/* end */
+
+--------------------
+

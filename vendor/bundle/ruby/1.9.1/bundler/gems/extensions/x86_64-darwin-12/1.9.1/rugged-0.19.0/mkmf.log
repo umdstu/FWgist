@@ -1,0 +1,91 @@
+find_executable: checking for cmake... -------------------- yes
+
+--------------------
+
+find_executable: checking for gmake... -------------------- no
+
+--------------------
+
+find_executable: checking for make... -------------------- yes
+
+--------------------
+
+find_executable: checking for pkg-config... -------------------- yes
+
+--------------------
+
+"cmake .. -DBUILD_CLAR=OFF -DTHREADSAFE=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS=-fPIC"
+-- http-parser was not found or is too old; using bundled 3rd-party sources.
+-- Found zlib: /usr/lib/libz.dylib
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/vendor/libgit2/build
+/usr/bin/make
+[100%] Built target git2
+have_library: checking for main() in -lgit2... -------------------- yes
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall -Wno-comment conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/build -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/usr/local/lib -lz -liconv -lgit2 -lssl -lcrypto -lz     -lruby.1.9.1  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall -Wno-comment conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/build -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/usr/local/lib -lz -liconv -lgit2 -lssl -lcrypto -lz     -lruby.1.9.1 -lgit2  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:4:53: error: 'main' undeclared (first use in this function)
+conftest.c:4:53: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:4:28: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -o conftest -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall -Wno-comment conftest.c  -L. -L/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/lib -L/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/build -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L. -L/usr/local/lib -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib  -L/usr/local/lib -lz -liconv -lgit2 -lssl -lcrypto -lz     -lruby.1.9.1 -lgit2  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:4:1: warning: implicit declaration of function 'main' [-Wimplicit-function-declaration]
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { main(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_header: checking for git2.h... -------------------- yes
+
+"/usr/local/Cellar/gcc46/4.6.4/bin/gcc-4.6 -E -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/x86_64-darwin12.5.0 -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1/ruby/backward -I/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/include/ruby-1.9.1 -I. -I/Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/../../vendor/libgit2/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include  -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fno-common -pipe  -g -O3 -Wall -Wno-comment  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <git2.h>
+/* end */
+
+--------------------
+

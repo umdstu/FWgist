@@ -1,0 +1,39 @@
+/Users/capollo/.rvm/rubies/ruby-1.9.3-p545/bin/ruby extconf.rb 
+checking for gmake... no
+checking for make... yes
+ -- /usr/bin/make -f Makefile.embed
+checking for main() in -lgit2_embed... yes
+checking for git2.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling rugged.c
+compiling rugged_blob.c
+compiling rugged_branch.c
+compiling rugged_commit.c
+compiling rugged_config.c
+compiling rugged_diff.c
+compiling rugged_diff_delta.c
+compiling rugged_diff_hunk.c
+compiling rugged_diff_line.c
+compiling rugged_diff_patch.c
+compiling rugged_index.c
+rugged_index.c: In function 'rb_git_index_update_all':
+rugged_index.c:455:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+compiling rugged_note.c
+compiling rugged_object.c
+compiling rugged_reference.c
+compiling rugged_remote.c
+compiling rugged_repo.c
+compiling rugged_revwalk.c
+compiling rugged_settings.c
+compiling rugged_signature.c
+compiling rugged_tag.c
+compiling rugged_tree.c
+linking shared-object rugged/rugged.bundle
+
+make  install
+/usr/bin/install -c -m 0755 rugged.bundle /Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/gems/rugged-0.19.0/ext/rugged/.gem.20140411-41470-1koh4jr/rugged
+installing default rugged libraries

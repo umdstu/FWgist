@@ -1,0 +1,36 @@
+ede4cddaab69c1985c069e1b7736935436c1d64d		branch 'arthur/examples' of https://github.com/libgit2/rugged
+cfe1414b23eefe2915a7ac8d4f041ba19a49ab3d		branch 'arthur/remotes-and-credentials' of https://github.com/libgit2/rugged
+613c13da2f2022aa812f06e70e6cb7e89f714e4d		branch 'backtrace-for-version-def' of https://github.com/libgit2/rugged
+8d8bc109a6d4fb37105e12abb03e7152f2e57961		branch 'bare-open' of https://github.com/libgit2/rugged
+4bf7b37729082a158e0adf10ff32a7f211155897		branch 'cmn/cmake' of https://github.com/libgit2/rugged
+669b50890c611500a0bd8aa9110238ec55fa7db1		branch 'cmn/first-parent' of https://github.com/libgit2/rugged
+7bffb369cfa19c700c01b8d4fa52c05b3b78e33f		branch 'cmn/merge-analysis' of https://github.com/libgit2/rugged
+4ee6480cf027dae04935564cafb346f3bf1c3c7e		branch 'cmn/pc-deps' of https://github.com/libgit2/rugged
+9bd5664566ddbb253151b97df214f584ffaa9d0f		branch 'cmn/search-paths' of https://github.com/libgit2/rugged
+a94a2e6df7a248dd12c3ee13ce2362304c309ffd		branch 'cmn/updates' of https://github.com/libgit2/rugged
+d9168b4b9f44f0c2eb4a668baf9d8ec16e3dedb0		branch 'development' of https://github.com/libgit2/rugged
+f45fb911c8c4b7bd6ddf765830216413d79b904d		branch 'diff-changes' of https://github.com/libgit2/rugged
+54bc31c2b2d765ca5f9e184d8e7417e32b6c0348		branch 'diff-iterator' of https://github.com/libgit2/rugged
+8037c75e9a286830129ffd565634070e229fab84		branch 'diff-stat' of https://github.com/libgit2/rugged
+88c1171033179661c1ff05c33459092e396bfad2		branch 'errors' of https://github.com/libgit2/rugged
+50cc3c03f258713e8519d3fb9211b9a3fbf76b2f		branch 'gemspec-fix' of https://github.com/libgit2/rugged
+036ae8f11ae0f0a1a7f3050d9397934a1e34776e		branch 'great-rename' of https://github.com/libgit2/rugged
+b587d68d1be6bc73dc19f81bb35be5b3dd3466be		branch 'immutable-refs' of https://github.com/libgit2/rugged
+e0abb115ea7909dd5201560810aad53e2fc87c04		branch 'index-open-update' of https://github.com/libgit2/rugged
+b487927d228f4a25c5df6cbc44fd9b60073a7492		branch 'index-refactor' of https://github.com/libgit2/rugged
+49c3ac9f33d1755b79d959efa77e26e0cc9e8f67		branch 'libgit2-fb60d2' of https://github.com/libgit2/rugged
+c131c7eff01d933ccf77da4b5b7a11b6f21bbbe2		branch 'master' of https://github.com/libgit2/rugged
+7bdde388b0f7bf4ecf079645f6cace2de5498a0f		branch 'native-timezones' of https://github.com/libgit2/rugged
+3a8a4b4ed802d7e78ad0fa54ba56bd4394754233		branch 'oid-access' of https://github.com/libgit2/rugged
+47d035a0d3809704ec7cdbe743160d4b57e4095b		branch 'peel-fixes' of https://github.com/libgit2/rugged
+ee05c2116454b3b5461f095640ebbec404a0080c		branch 'remotes-wip' of https://github.com/libgit2/rugged
+04fb90d89573f583e446a4968fe30bf4772fb8ee		branch 'rev-parse' of https://github.com/libgit2/rugged
+2c1654b88d3d6934e067b85a24b7597cf962b32f		branch 'time-toggle-api' of https://github.com/libgit2/rugged
+baf73f64d77454f55e3037a00e36f5d0b818fcc9		branch 'tomdoc' of https://github.com/libgit2/rugged
+945c23ffa1a6c298a7dd24a2f007b36831282bf1		branch 'vmg/clean-build' of https://github.com/libgit2/rugged
+0ec91bf1a8c8bdff6468078fd6a5c1ea3491d43f	not-for-merge	tag 'v0.1.0' of https://github.com/libgit2/rugged
+a9655409ac02834e429108cbf68cbda2d8ff4512	not-for-merge	tag 'v0.16.0' of https://github.com/libgit2/rugged
+8451c35fe230e46e24365f233ae5d79ec468b2f1	not-for-merge	tag 'v0.17.0b1' of https://github.com/libgit2/rugged
+f1c9b66e29b072f08640d6a8c7f89ae27ad31086	not-for-merge	tag 'v0.17.0b5' of https://github.com/libgit2/rugged
+7f408b84908152f1480234b52f49951f35261eca	not-for-merge	tag 'v0.19.0' of https://github.com/libgit2/rugged
+ad27cf2957456aa8ee035841c930f615671a7ccc	not-for-merge	tag 'v0.2.0' of https://github.com/libgit2/rugged
