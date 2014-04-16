@@ -7,6 +7,7 @@ class GistsController < ApplicationController
 
   def show
     @gist = Gist.find(params[:id])
+    @repo = @gist.repo.repo
     @tree = @gist.tree(params[:revision].presence)
   end
 

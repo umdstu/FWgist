@@ -28,9 +28,19 @@
   </table>
 
   <%- @tree.each do |b| %>
-  <%= b.inspect %>
+    <% diff = @repo.rev_parse(params[:revision] || @repo.head.target.tree_id).diff(@repo.head.target.parents.first) %>
+
+    <% diff.each_line(:patch) do |line| %>
+      <%= ' ' if line.context? %> 
+      <%= '+' if line.addition? %>
+      <%= '-' if line.deletion? %>
+      <%= line.content if line.content[0] != 'd' %>
+      <br>
+    <% end  %>
+
+    <br>
     <% gb = GistFilePresenter.new(b) %>
-    <%= gb.inspect %>
+
     <div class="file">
       <div class="row">
         <div class="meta span8"> <b><%= fa_icon('file-text', :text => b.name) %></b></div>
