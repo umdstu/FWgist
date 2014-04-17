@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.effects.highlight
 //= require twitter/bootstrap
+//= require select2
 //= require ace/ace
 //= require ace/theme-monokai
 //= require holder

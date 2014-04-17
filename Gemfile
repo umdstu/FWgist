@@ -30,6 +30,7 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'select2-rails'
 
 gem 'kaminari'
 gem 'bootstrap_kaminari', :git => 'https://github.com/gmarik/bootstrap_kaminari'

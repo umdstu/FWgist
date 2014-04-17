@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $(".gist-language-select").select2();
+  
   $(".copy-input").on('click', function() {
     $(this).select();
   });

@@ -41,5 +41,5 @@ compiling rugged_tree.c
 linking shared-object rugged/rugged.bundle
 
 make  install
-/usr/bin/install -c -m 0755 rugged.bundle /Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/.gem.20140415-52032-zz8t5f/rugged
+/usr/bin/install -c -m 0755 rugged.bundle /Users/capollo/develop/fwgist/vendor/bundle/ruby/1.9.1/bundler/gems/rugged-d9168b4b9f44/ext/rugged/.gem.20140417-62350-1820rao/rugged
 installing default rugged libraries

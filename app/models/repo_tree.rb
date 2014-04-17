@@ -4,11 +4,11 @@ class RepoTree
 
   class Blob
 
-    attr_reader :name, :oid, :type, :filemode
+    attr_reader :name, :language, :oid, :type, :filemode
 
     def initialize(tree, params)
       @tree = tree
-      @name, @oid, @type, @filemode = params.values_at(:name, :oid, :type, :filemode)
+      @name, @language, @oid, @type, @filemode = params.values_at(:name, :language, :oid, :type, :filemode)
     end
 
     def data

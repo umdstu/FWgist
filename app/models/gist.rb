@@ -8,6 +8,7 @@ class Gist < ActiveRecord::Base
   validate :non_blank, :unique_names
 
   scope :recent, -> { order('created_at desc') }
+  scope :updated, -> { order('updated_at desc') }
 
   def non_blank
     blank? and errors.add(:gist_files, "Can't be blank")
@@ -86,7 +87,7 @@ class Gist < ActiveRecord::Base
 
   def gist_file(entry)
     # TODO: make consitent
-    params = {name: entry.name, blob: entry.content}
+    params = {name: entry.name, language: entry.language, content: entry.content}
     GistFile.new(params)
   end
 

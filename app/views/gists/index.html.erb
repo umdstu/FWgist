@@ -1,11 +1,19 @@
-<h2>Recent gists</h2>
+<h3>Recent gists</h3>
 
 <% if @gists.empty? %>
 
   be the first to <%= link_to "create one", [:new, :gist] %>
 
 <% else %>
-
+<div class="row">
+  <div class="span2 offset7">
+    <div id="sort-links" class="pull-right">
+      <%= link_to "Created", gists_path(:sort => 'created'), :class => (@sort && @sort == 'created' ? '' : 'inactive') %>
+      <%= link_to "Updated", gists_path(:sort => 'updated'), :class => (@sort && @sort == 'updated' ? '' : 'inactive') %>
+    </div>
+  </div>
+</div>
+<hr>
 <% @gists.each do |gist| %>
 
   <div class="row gist" data-gist_id="<%= gist.id %>">
@@ -17,7 +25,11 @@
     </div>
 
     <div class="span2">
-      <abbr class="timeago pull-right" title="<%= time = gist.created_at.getutc.iso8601 %>"> <%= time.to_s %></abbr>
+      <% if @sort && @sort == 'updated' %>
+      <abbr class="timeago pull-right" title="<%= time = gist.updated_at.getutc.iso8601 %>"> <%= time.to_s %></abbr>
+      <% else %>
+        <abbr class="timeago pull-right" title="<%= time = gist.created_at.getutc.iso8601 %>"> <%= time.to_s %></abbr>
+      <% end %>
     </div>
 
     <div class="span9 syntax">

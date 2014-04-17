@@ -1,9 +1,9 @@
 class GistFile
   include ActiveModel::Validations
 
-  attr_accessor :blob, :name#, :description
+  attr_accessor :content, :name, :language #, :description
 
-  validates :blob, { presence: true }
+  validates :content, { presence: true }
 
   def initialize(params = {})
     params.each do |k, v|
@@ -15,7 +15,11 @@ class GistFile
     @name
   end
 
+  def language
+    @language
+  end
+
   def blank?
-    self.blob.blank?
+    self.content.blank?
   end
 end

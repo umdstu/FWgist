@@ -35,14 +35,15 @@ module RepoWriter
   end
 
   def write_blobs(blobs)
-    blobs.map { |b| [b.name, write_blob(b.blob)] }
+    blobs.map { |b| [b.name, b.language, write_blob(b.content)] }
   end
 
   def write_tree(blob_named_sha1s, builder = Rugged::Tree::Builder.new)
-    blob_named_sha1s.each do |name, oid|
+    blob_named_sha1s.each do |name, language, oid|
       builder << {
         type: :blob,
         name: name,
+        language: language,
         oid:  oid,
         filemode: 33188
       }

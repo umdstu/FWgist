@@ -1,3 +1,11 @@
+#sort-links a.inactive {
+  color: #999;
+}
+#sort-links a {
+  color: #333;
+  text-decoration: none;
+}
+
 #gist_description {
   font-family: Helvetica, arial, freesans, clean, sans-serif;
   font-size: 14px;
@@ -15,15 +23,18 @@
 .gist_blob {
   
 }
-#gist_gist_blob_name {
-  background: transparent;
+#gist_gist_file_name {
+  background: #fff;
   color: #333333;
   outline: 0;
   padding: 4px;
   margin-bottom: 0px;
   margin: 5px;
 }
-
+#gist_gist_file_language {
+  margin-bottom: 0px;
+  margin: 5px;
+}
 .bubble {
   background-color: #fafafa;
   border-radius: 3px;
@@ -38,12 +49,17 @@
 .file label {
   padding-top: 0px !important;
 }
-
+.file > .controls {
+  background-color: #fafafa;
+}
 .gist {
   margin-top: 25px;
 }
 .gist-file textarea {
   height: 20em;
+}
+.gist .data {
+  background-color: #f8f8ff;
 }
 .file-content {
   position: relative;
@@ -65,4 +81,73 @@
 }
 form a[rel=rmBlob] {
   margin-top: 4px;
+}
+
+
+.file-wrapper {
+  background-color: #eee;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  padding: 3px;
+}
+.file {
+  background-color: #ececec;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.file .metadata {
+  background-color: #fafafa;
+  border-bottom: 1px solid #d8d8d8;
+  color: #555;
+  font-size: 12px;
+  position: relative;
+  height: 34px;
+}
+.file .metadata:before, 
+.file .metadata:after {
+  content: " ";
+  display: table;
+}
+.file-info {
+  float: left;
+  height: 34px;
+  line-height: 33px;
+}
+.file-info .file-name {
+  color: #333333;
+  display: inline-block;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 610px;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+.file-language {
+  color: #999999;
+  font-weight: bold;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.file-actions {
+  float: right;
+  height: 34px;
+  line-height: 34px;
+}
+.file-type > i {
+  padding-left: 10px;
+}
+.file-action-links {
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+.file-action-links a {
+  padding: 5px;
+}
+.gist-language-select {
+  width: 160px;
 }

@@ -1,7 +1,111 @@
-<% @gist.recent_commits.each do |c| %>
-  <li>
-    <%= c.gist %>
-    <a href="<%= gist_path(@gist, revision: c.sha) %>"><abbr class="sha" title="<%= c.sha %>"><%= c.pretty_sha %></abbr></a>
-    <abbr class="timeago " title="<%= (time = c.created_at.getutc).iso8601 %>"> <%= time.to_s %></abbr>
-  </li>
+<style type="text/css">
+  .changed-file {
+    margin-bottom: 5px;
+  }
+  .changed-file > thead {
+    background-color: #fafafa;
+  }
+  .metadata {
+    font-size: 12px;
+  }
+  .metadata > b {
+    color: #777;
+  }
+  .diff-row,
+  .diff-row > td {
+    padding: 0px;
+    line-height:16px;
+  }
+  .line-white {
+    padding-left: 8px;
+  }
+  .line-red {
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    background-color: #ffdddd;
+    display: block;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  .line-green {
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+    background-color: #ddffdd;
+    display: block;
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  td.line-num {
+    text-align: right;
+    padding-right: 5px;
+    color: #AAA;
+    font-size: 12px;
+  }
+  .hunk-header,
+  .hunk-header > td{
+    line-height: 5px;
+    color: #AAA;
+    font-size: 12px;
+  }
+  .hunk-header > td:last-child {
+    background-color: #eaf2f5;
+  }
+  .diff-row > td {
+    border-top: 0px;
+  }
+</style>
+
+<% content_for :sidebar do %>
+  <%= render partial: 'revisions', locals: { gist: @gist } %>
+  <span class='copy-input-title'><b>Clone</b> this Gist</span>
+  <input type="text" class="span2 copy-input" value="<%= public_clone_url(@gist) %>"/>
+  <span class='copy-input-title'><b>Link to</b> this Gist</span>
+  <input type="text" class="span2 copy-input" value="<%= public_clone_url(@gist) %>"/>
+<% end %>
+
+<div class="row">
+  <div class="span7">
+    <table class="table table-bordered meta" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr class="info">
+          <th class="span2">Description </th>
+          <td style="color: #777;"> <%= @gist.description.empty? ? 'No description...' : @gist.description %> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="span2 pull-right text-pull-right">
+    <%= link_to fa_icon('edit',  :text => "Edit"), edit_gist_path(@gist), class: 'btn' %>
+    <%= link_to fa_icon('trash-o', :text => "Delete"), @gist, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
+  <span class="metadata">
+    <% if @previous.nil? %>
+      <b>Initial Gist. <%= @diff.patches.count %> files</b> with <b><%= pluralize(@diff.patches.sum {|d| d.stat[0]}, "line") %></b>.
+    <% else %>
+    <b><%= @diff.patches.count %> changed files</b> with <b><%= pluralize(@diff.patches.sum {|d| d.stat[0]}, "addition") %></b> and <b><%= pluralize(@diff.patches.sum {|d| d.stat[1]}, "subtraction") %></b>. 
+    <% end %>
+  </span>
+<% @diff.each_patch do |patch| %>
+  <% patch.each_hunk do |hunk| %>
+    <table class="changed-file table table-bordered">
+      <thead>
+        <tr><th style="padding-left: 15px;"><%= fa_icon('bullseye') %></th><th colspan="2" style="border-left: 0px;padding-left:0px;"><%= hunk.owner.delta.new_file[:path] %><span class='pull-right'><%= patch.changes %></span></th></tr>
+      </thead>
+      <tbody>
+        <tr class="hunk-header">
+          <td style="width:20px;">. . .</td>
+          <td style="width:20px;">. . .</td>
+          <td><%= hunk.header %></td>
+        </tr>
+        <% hunk.each_line do |line| %>
+          <% not_new = (line.line_origin == :eof_no_newline || line.line_origin == :eof_newline_removed || line.line_origin == :eof_newline_added || line.line_origin == :context ) %>
+          <% color = not_new ? "white" : (line.deletion? ? "red" : "green") %>
+          <tr class="diff-row">
+            <td class="line-num"><%=  line.deletion? || line.context? ? line.old_lineno : " " %></td>
+            <td class="line-num"><%=  line.addition? || line.context? ? line.new_lineno : " " %></td>
+            <td><span class='line-<%= color %>'><%=  not_new ? "&nbsp; ".html_safe + line.content : ((line.deletion? ? "-" : "+") + line.content) %></span></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
 <% end %>

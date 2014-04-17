@@ -1,19 +1,21 @@
 <% n = "gist[gist_files_attributes][]" -%>
-
 <%= f.fields_for(gist_file) do |gf| -%>
   <div class="bubble gist-file">
     <div class="control-group file">
-      
-        <div class="controls"> 
-          <%= gf.text_field 'name', :name => "#{n}[name]", class: 'span3', placeholder: 'name this file...' -%>
+      <div class="controls"> 
+        <span class="left-controls">
+          <%= gf.text_field 'name', :name => "#{n}[name]", :class => 'span2', :placeholder => 'name this file...' -%>
+          <%= gf.select :language, options_for_select(pyments_languages.map {|lang| [lang, lang]}), {}, {:class => 'gist-language-select', :name => "#{n}[language]"} %>
+        </span>
+        <span class="right-controls">
           <label class="checkbox inline"><input type="checkbox" class="ace-enable" /> ACE Editor</label>
           <a rel="rmBlob" class="btn btn-danger pull-right btn-small" title="remove file"><i class="icon-remove-sign"></i> Delete</a>
-        </div>
-        <div class="input">
-          <%= gf.text_area 'blob', :name => "#{n}[blob]", class: 'span10 gist_blob' -%>
-          <div class="file-content"></div>
-        </div>
-      
+        </span>
+      </div>
+      <div class="input">
+        <%= gf.text_area 'content', :name => "#{n}[content]", :class => 'span10 gist_content' -%>
+        <div class="file-content"></div>
+      </div>
     </div>
   </div>
 
